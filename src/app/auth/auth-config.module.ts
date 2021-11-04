@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {AuthModule} from 'angular-auth-oidc-client';
+import {AuthModule, LogLevel} from 'angular-auth-oidc-client';
 import {CustomStorage} from './custom-storage';
 import { AuthCallbackComponent } from './auth-callback/auth-callback/auth-callback.component';
 
@@ -16,6 +16,7 @@ import { AuthCallbackComponent } from './auth-callback/auth-callback/auth-callba
       silentRenew: true,
       useRefreshToken: true,
       renewTimeBeforeTokenExpiresInSeconds: 30,
+      logLevel: LogLevel.Debug,
       storage: new CustomStorage()
     }
   })],
