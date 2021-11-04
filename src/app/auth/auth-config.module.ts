@@ -8,7 +8,8 @@ import {AuthCallbackComponent} from './auth-callback/auth-callback/auth-callback
   imports: [AuthModule.forRoot({
     config: {
       authority: 'https://a.labshare.org/_api/auth/NCI-CCR',
-      redirectUrl: window.location.origin,
+      redirectUrl: window.location.origin+'/auth-callback',
+      postLoginRoute: '/home',
       postLogoutRedirectUri: window.location.origin,
       clientId: '0_AbvYXBiY2df9jHRDhcw',
       scope: 'openid profile', // 'openid profile offline_access ' + your scopes
