@@ -10,23 +10,23 @@ export class AppComponent implements OnInit {
   title = 'labshare-test';
 
   constructor(public oidcSecurityService: OidcSecurityService) {
-    this.login();
+
   }
 
   ngOnInit() {
-    this.oidcSecurityService.checkAuth().subscribe(({isAuthenticated}) => {
-      if (!isAuthenticated)
-      {
-        console.log('not authenticated');
-      }
-    });
+   /* this.oidcSecurityService.checkAuth().subscribe(({isAuthenticated, accessToken}) => {
+      console.log('app authenticated', isAuthenticated);
+      console.log(`Current access token is '${accessToken}'`);
+    });*/
   }
 
   login() {
+    console.log('start login');
     this.oidcSecurityService.authorize();
   }
 
   logout() {
+    console.log('start logoff');
     this.oidcSecurityService.logoff();
   }
 }
