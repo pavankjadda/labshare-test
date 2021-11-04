@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {AuthModule, LogLevel} from 'angular-auth-oidc-client';
 import {CustomStorage} from './custom-storage';
-import { AuthCallbackComponent } from './auth-callback/auth-callback/auth-callback.component';
+import {AuthCallbackComponent} from './auth-callback/auth-callback/auth-callback.component';
 
 
 @NgModule({
