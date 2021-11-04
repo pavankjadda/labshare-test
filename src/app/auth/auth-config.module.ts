@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
 import {AuthModule} from 'angular-auth-oidc-client';
 import {CustomStorage} from './custom-storage';
+import { AuthCallbackComponent } from './auth-callback/auth-callback/auth-callback.component';
 
 
 @NgModule({
@@ -19,7 +20,10 @@ import {CustomStorage} from './custom-storage';
     }
   })],
   exports: [AuthModule],
-  providers: []
+  providers: [],
+  declarations: [
+    AuthCallbackComponent
+  ]
 })
 export class AuthConfigModule {
 }
