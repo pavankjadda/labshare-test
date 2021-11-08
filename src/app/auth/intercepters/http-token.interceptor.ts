@@ -19,12 +19,12 @@ export class HttpTokenInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const token = this.oidcSecurityService.getAccessToken();
     console.log('token', token);
-    request = request.clone(
+    /*request = request.clone(
       {
         setHeaders: {
           'Authorization': 'Bearer ' + token
         }
-      });
+      });*/
     return next.handle(request);
   }
 }
